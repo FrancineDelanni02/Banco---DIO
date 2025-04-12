@@ -1,6 +1,6 @@
 package banco;
 
-public class Conta {
+public abstract class Conta implements InterfaceConta{
 
     private int numero;
     private int agencia;
@@ -16,5 +16,17 @@ public class Conta {
 
     public boolean transferir(){
         return true;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public double getSaldo() {
+        return saldo;
     }
 }
