@@ -7,11 +7,13 @@ public abstract class Conta implements InterfaceConta{
     private int numero;
     private int agencia;
     private double saldo;
+    private Cliente cliente;
 
-    public Conta(){
+    public Conta(Cliente cliente){
        this.numero = SEQUENCIAL++;
        this.agencia = Conta.AGENCIA_PADRAO;
        this.saldo = 0;
+       this.cliente = cliente;
     }
 
     public boolean sacar(double valor){
@@ -47,6 +49,7 @@ public abstract class Conta implements InterfaceConta{
     }
 
     public void imprimirExtrato(){
+        System.out.println("Nome do cliente: "+this.cliente.getNome());
         System.out.println("Agência: "+ this.agencia);
         System.out.println("Número: "+this.numero);
         System.out.println("Saldo: "+this.saldo);
