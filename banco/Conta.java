@@ -45,4 +45,10 @@ public abstract class Conta implements InterfaceConta{
     public double getSaldo() {
         return saldo;
     }
+
+    public void imprimirExtrato(){
+        System.out.println("Agência: "+ this.agencia);
+        System.out.println("Número: "+this.numero);
+        System.out.println("Saldo: "+this.saldo);
+    }
 }
